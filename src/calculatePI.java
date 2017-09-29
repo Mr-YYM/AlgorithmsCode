@@ -9,7 +9,13 @@ public class calculatePI {
         StdDraw.text(0.968,0.33415,"PI");
         StdDraw.setPenColor(StdDraw.BLUE);
         StdDraw.circle(0,0,1);
-        int t = 1000;
+        int t = 1;
+        int n = dumpPoint(t);
+        StdDraw.show();
+        System.out.println(4.0*n/(double)t);
+    }
+
+    private static int dumpPoint(int t) {
         StdDraw.setPenRadius(.005);
         int n = 0;
         for (int i = 0; i < t; i++) {
@@ -25,7 +31,6 @@ public class calculatePI {
             if(i!=0)
                 StdDraw.point(i/(double)t,4*n/(double)i/10.0);
         }
-        StdDraw.show();
-        System.out.println(4.0*n/(double)t);
+        return n;
     }
 }
