@@ -185,7 +185,7 @@ public class SingleILinkedList<T> implements ILinkedList<T> {
      */
     @Override
     public void clear() {
-
+        this.head=null;
     }
 
     /**
