@@ -110,6 +110,7 @@ public class SingleILinkedList<T> implements ILinkedList<T> {
                 front=front.next;
                 count++;
             }
+
             //尾部添加和中间插入属于同种情况,毕竟当front为尾部结点时front.next=null
             front.next=new Node<T>(data,front.next);
         }

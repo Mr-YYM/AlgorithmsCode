@@ -33,7 +33,7 @@ public class Stack<Item> {
         for (int i = 0; i < 10; i++) {
             s.push(in.nextLine());
         }
-        System.out.printf("閾捐〃涓湁%d涓厓绱狅紝浠栦滑鍒嗗埆鏄痋n",s.size());
+        System.out.printf("链表中有%d个元素，他们分别是\n",s.size());
 
         for (int i = 0; i < 10; i++) {
             System.out.println(s.pop());

@@ -8,15 +8,16 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int lside = 3;
+        double lside = 1.5;
         StdDraw.setXscale(-lside,lside);
         StdDraw.setYscale(-lside,lside);
-        int T = 200000;
-//        drawAHeart(T);
+        StdDraw.setPenRadius(.005);
+        int T = 200;
+        drawAHeart(T);
 
 //        drawASquare(5,lside);
 
-        drawAStar(lside);
+//        drawAStar(lside);
 
 //        double x,y=0;
 //
@@ -61,7 +62,7 @@ public class Main {
             StdDraw.setPenColor(StdDraw.BLACK);
             double x = Math.random()*3-1.5;
             double y = Math.random()*3-1.5;
-            if(Math.pow(x*x+y*y-1,3)-x*x*Math.pow(y,3)>0)
+            if(Math.pow(x*x+y*y-1,3)-x*x*Math.pow(y,3)<0)
                 StdDraw.setPenColor(StdDraw.RED);
             Point2D p = new Point2D(x,y);
             p.draw();

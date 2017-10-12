@@ -8,8 +8,8 @@ public class Evaluate {
         Stack<Double> vals = new Stack<>();
         //接受输入一个等式
         String equation = StdIn.readString();
-        char[] sign = equation.toCharArray();
-        for(Character each_sign : sign){
+        char[] signs = equation.toCharArray();
+        for(Character each_sign : signs){
             if      (each_sign.equals('('));
             else if (each_sign.equals('+'))     ops.push(each_sign);
             else if (each_sign.equals('-'))     ops.push(each_sign);
