@@ -2,6 +2,11 @@ package IteratorTry;
 
 import java.util.Iterator;
 
+
+/**
+ * @author Yeming
+ */
+
 public class ResizingArrayStack<Item> implements Iterable<Item> {
     private Item[] a = (Item[]) new Object[1];
     private int size = 0;
@@ -27,7 +32,8 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     public Item pop() {
         Item item = a[--size];
         a[size] = null;
-        if (size>0 && size==a.length/4) {
+        int resizeLen = 4;
+        if (size>0 && size==a.length/resizeLen) {
             resize(a.length / 2);
         }
         return item;
@@ -39,9 +45,8 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
 
     public static void main(String[] args) {
-        
+        System.out.println();
     }
-
     private class ReverseArrayIterator implements Iterator<Item> {
         private int i = size;
         @Override
