@@ -45,5 +45,6 @@ public class BinarySearch {
                 StdOut.println(key);
             }
         }
+        System.out.println("over");
     }
 }
